@@ -122,35 +122,35 @@ class AttendanceController extends Controller
         }
     }
 
-    // /**
-    //  * Get List Presences by User
-    //  * @param Request $request
-    //  * @return JsonResponse
-    //  * @throws BindingResolutionException
-    //  */
-    // public function history(Request $request)
-    // {
-    //     $request->validate(
-    //         [
-    //             'from' => ['required'],
-    //             'to' => ['required'],
-    //         ]
-    //     );
+    /**
+     * Get List Presences by User
+     * @param Request $request
+     * @return JsonResponse
+     * @throws BindingResolutionException
+     */
+    public function history(Request $request)
+    {
+        $request->validate(
+            [
+                'from' => ['required'],
+                'to' => ['required'],
+            ]
+        );
 
-    //     $history = $request->user()->attendances()->with('detail')
-    //         ->whereBetween(
-    //             DB::raw('DATE(created_at)'),
-    //             [
-    //                 $request->from, $request->to
-    //             ]
-    //         )->get();
+        $history = $request->user()->attendances()->with('detail')
+            ->whereBetween(
+                DB::raw('DATE(created_at)'),
+                [
+                    $request->from, $request->to
+                ]
+            )->get();
 
-    //     return response()->json(
-    //         [
-    //             'message' => "list of presences by user",
-    //             'data' => $history,
-    //         ],
-    //         Response::HTTP_OK
-    //     );
-    // }
+        return response()->json(
+            [
+                'message' => "list of presences by user",
+                'data' => $history,
+            ],
+            Response::HTTP_OK
+        );
+    }
 }
