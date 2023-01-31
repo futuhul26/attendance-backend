@@ -6,12 +6,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Attendance List</h1>
+                <h1 class="m-0 text-dark">Daftar Kehadiran</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Attendance</li>
+                    <li class="breadcrumb-item active">Kehadiran</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -35,8 +35,8 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            <i class="ion ion-clipboard mr-1"></i>
-                            Attendance
+                            <i class="fas fa-user-check mr-1"></i>
+                            Kehadiran
                         </h3>
                     </div>
                     <!-- /.card-header -->
@@ -46,10 +46,10 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>User</th>
+                                    <th>Pengguna</th>
                                     <th>Status</th>
-                                    <th>Check In Time</th>
-                                    <th>Check Out Time</th>
+                                    <th>Waktu Check In</th>
+                                    <th>Waktu Check Out</th>
                                     <th></th>
                                 </tr>
                             </thead>

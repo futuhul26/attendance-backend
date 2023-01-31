@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+// namespace App\Charts;
 
 use App\Attendance;
+// use ConsoleTVs\Charts\Classes\Chartjs\Chart;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -46,3 +48,10 @@ class AttendanceController extends Controller
         return view('pages.attendance.show', compact('attendance'));
     }
 }
+
+// class AttendanceChart extends Chart
+// {
+//     public function __construct(){
+//         parent::__construct();
+//     }
+// }

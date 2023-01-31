@@ -16,7 +16,7 @@
             <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="{{ url('/home') }}" class="nav-link active">
+                <a href="{{ url('/home') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
                         Dashboard
@@ -24,27 +24,27 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/attendance') }}" class="nav-link">
+                <a href="{{ url('/attendance') }}" class="nav-link {{ Request::is('attendance') ? 'active' : '' }}">
                     <i class="nav-icon far fa-calendar-alt"></i>
                     <p>
-                        Attendance
+                        Kehadiran
                     </p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/user') }}" class="nav-link">
+                <a href="{{ url('/user') }}" class="nav-link {{ Request::is('user') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-user"></i>
                     <p>
-                        Users
+                        Pengguna
                     </p>
                 </a>
             </li>
-            <li class="nav-header">LABELS</li>
+            <!--<li class="nav-header">LABELS</li>-->
             <li class="nav-item">
                 <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
-                    <i class="nav-icon far fa-circle text-danger"></i>
-                    <p class="text">Logout</p>
+                    <i class="nav-icon fas fa-sign-out-alt"></i>
+                    <p class="text">Keluar</p>
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

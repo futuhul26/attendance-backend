@@ -5,13 +5,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Attendance</h1>
+                <h1 class="m-0 text-dark">Kehadiran</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item">Attendance</li>
-                    <li class="breadcrumb-item active">Show</li>
+                    <li class="breadcrumb-item">Kehadiran</li>
+                    <li class="breadcrumb-item active">Detail</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,13 +26,13 @@
             <!-- Left col -->
             <section class="col-lg-12">
                 <!-- Attendance Chart -->
-                <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary mb-2">Back</a>
+                <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary mb-2">Kembali</a>
 
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            <i class="ion ion-clipboard mr-1"></i>
-                            Attendance
+                            <i class="fas fa-user-check mr-1"></i>
+                            Kehadiran
                         </h3>
                     </div>
                     <!-- /.card-header -->
@@ -40,7 +40,7 @@
                         <table class="table" id="datatable">
                             <tbody>
                                 <tr>
-                                    <th>Name</th>
+                                    <th>Nama</th>
                                     <td>{{ $attendance->user->name }}</td>
                                 </tr>
                                 <tr>
@@ -48,11 +48,11 @@
                                     <td>{{ $attendance->status ? 'Check Out' : 'Check In' }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Check In</th>
+                                    <th>Waktu Check In</th>
                                     <td>{{ $attendance->created_at }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Check Out</th>
+                                    <th>Waktu Check Out</th>
                                     <td>{{ $attendance->updated_at }}</td>
                                 </tr>
                             </tbody>
@@ -65,8 +65,8 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            <i class="ion ion-clipboard mr-1"></i>
-                            Attendance {{ $detail->type }}
+                            <i class="fas fa-user-check mr-1"></i>
+                            Detail Kehadiran ({{ $detail->type }})
                         </h3>
                     </div>
                     <!-- /.card-header -->
@@ -74,30 +74,30 @@
                         <table class="table" id="datatable">
                             <tbody>
                                 <tr>
-                                    <th>Time</th>
+                                    <th>Waktu</th>
                                     <td>{{ $detail->created_at }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Long, lat</th>
-                                    <td>{{ $detail->long }}, {{ $detail->lat }}</td>
+                                    <th>Lat, Long</th>
+                                    <td>{{ $detail->lat }}, {{ $detail->long }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Address</th>
+                                    <th>Alamat</th>
                                     <td>{{ $detail->address }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Location</th>
+                                    <th>Lokasi</th>
                                     <td>
                                         <div style="width: 100%">
                                             <iframe width="100%" height="300" frameborder="0" scrolling="no"
                                                 marginheight="0" marginwidth="0"
-                                                src="https://maps.google.com/maps?q={{ $detail->long }},{{ $detail->lat }}&hl=en&z=14&amp;output=embed">
+                                                src="https://maps.google.com/maps?q={{ $detail->lat }},{{ $detail->long }}&hl=en&z=17&amp;output=embed">
                                             </iframe>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Photo</th>
+                                    <th>Foto</th>
                                     <td><img width="350" src="{{ asset('/storage/attendance/' . $detail->photo) }}" alt=""></td>
                                 </tr>
                             </tbody>
