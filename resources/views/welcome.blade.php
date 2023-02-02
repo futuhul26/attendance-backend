@@ -27,7 +27,7 @@
 
     <!-- START LOCK SCREEN ITEM -->
     <div class="lockscreen-item text-center">
-      <h2>Sugeng Rawuh</h2>
+      <h2>Selamat Datang di Website</h2>
     </div>
     <!-- /.lockscreen-item -->
     <div class="help-block text-center">
