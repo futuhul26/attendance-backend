@@ -43,6 +43,10 @@
                                     <td>{{ $user->name }}</td>
                                 </tr>
                                 <tr>
+                                    <th>Unit Kerja</th>
+                                    <td>{{ $user->unit_kerja }}</td>
+                                </tr>
+                                <tr>
                                     <th>E-Mail</th>
                                     <td>{{ $user->email }}</td>
                                 </tr>

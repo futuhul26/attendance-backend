@@ -52,6 +52,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Nama</th>
+                                    <th>Unit Kerja</th>
                                     <th>E-Mail</th>
                                     <th></th>
                                 </tr>
@@ -79,8 +80,9 @@
             responsive: true,
             ajax: '{{ url("user") }}',
             columns: [
-                {data: 'id', name: 'id'},
+                {data: 'DT_RowIndex', name: 'id'},
                 {data: 'name', name: 'name'},
+                {data: 'unit_kerja', name: 'unit_kerja'},
                 {data: 'email', name: 'email'},
                 {data: 'action', name: 'action', orderable: false, searchable: false}
             ]
